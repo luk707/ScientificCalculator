@@ -161,9 +161,9 @@ def lex (source):
                 foundMatch = True
                 break
         if not foundMatch:
-            print source
-            print ' ' * pointer + "^"
-            print "Unexpected character {0}".format(source[pointer])
+            print(source)
+            print(' ' * pointer + "^")
+            print("Unexpected character {0}".format(source[pointer]))
             sys.exit(1)
         
     return result
@@ -198,10 +198,10 @@ if (len(sys.argv) > 1):
     for i in range(1, len(sys.argv)):
         program = lex(sys.argv[i])
         ans = parse(program)
-        print ans
+        print(ans)
 else:
     while True:
         source = raw_input("> ")
         program = lex(source)
         ans = parse(program)
-        print ans
+        print(ans)
